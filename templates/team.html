@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="/./static/style.css">
+    <meta http-equiv="refresh" content="10">
+</head>
+<body bgcolor="#b7d7e8">
+    <header class="head">
+        <img class="ipl-logo" src="/./static/logo1.jpg" alt="ipl-logo">
+        <img class="event-logo" src="/./static/logo2.jpg" alt="Bid, Battle and tdiumph">
+        <img class="qubit-logo" src="/./static/logo3.jpg" alt="qubit-logo">
+    </header>
+    <footer>
+        <table class="team-details">
+            <tr>
+                <th>
+                    Team Name :
+                </th>
+                <td>{{teamdetails.name}}</td>
+            </tr>
+            <tr>
+                <th>
+                    Remaing Purse : 
+                </th>
+                <td>{{teamdetails.purse}} Crores</td>
+            </tr>
+            <tr>
+                <th>
+                    Team Points 
+                </th>
+                <td>
+                    {{ teamlists | sum('points')}}
+                </td>
+            </tr>
+        </table>
+        <table class="players-details">
+            <tr>
+                <th> Player Names </th>
+                <th> Player Role </th>
+                <th> Sold For </th>
+                <th> Points</th>
+            </tr>
+            {% for p in myteamplayers %}
+            {% if p.status == 1 %}
+            <tr>
+                <td>{{p.name}}</td>
+                <td>{{p.role}}</td>
+                {% for t in teamlists %}
+                    {% if t.pid==p.id %}
+                    <td>{{t.amount}} Crores</td>
+                    <td>{{p.points}}</td>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+
+        </table>
+    </footer>
+</body>
+</html>

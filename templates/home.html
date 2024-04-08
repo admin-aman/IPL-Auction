@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/./static/style.css">
+</head>
+<body bgcolor="#b7d7e8">
+    <header class="head">
+        <img class="ipl-logo" src="/./static/logo1.jpg" alt="ipl-logo">
+        <img class="event-logo" src="/./static/logo2.jpg" alt="Bid, Battle and tdiumph">
+        <img class="qubit-logo" src="/./static/logo3.jpg" alt="qubit-logo">
+    </header>
+    <footer>
+        <center>
+            <form action="/login" method="POST">
+                <table class="auctioner">
+                    <h3>USER LOGIN</h3>
+                    <tr>
+                        <th>USERNAME : </th>
+                        <td><input type="text" size="30" name="uname" id="uname" required></td>
+                    </tr>
+                    <tr>
+                        <th>PASSWORD : </th>
+                        <td><input type="password" size="30" name="pwd" id="pwd" required></td>
+                    </tr>
+                    <tr>
+                        <th> LOGIN AS :</th>
+                        <td>
+                            <input type="radio" name="type" id="Admin" value="Admin"> AUCTIONER
+                            <input type="radio" name="type" id="Team" value="Team"> TEAM
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="reset" value="RESET" class="bt">
+                        </td>
+                        <td>
+                            <input type="submit" value="LOGIN" class="bt">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </footer>
+</body>
+</html>

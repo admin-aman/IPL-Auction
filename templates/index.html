@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL-2024</title>
+    <link rel="stylesheet" href="/./static/style.css">
+    
+</head>
+<body bgcolor="#b7d7e8">
+    <header class="head">
+        <img class="ipl-logo" src="/./static/logo1.jpg" alt="ipl-logo">
+        <img class="event-logo" src="/./static/logo2.jpg" alt="Bid, Battle and tdiumph">
+        <img class="qubit-logo" src="/./static/logo3.jpg" alt="qubit-logo">
+    </header>
+    <center>
+        <form action="/admin" method="POST">
+            <table class="main">
+                <tr>
+                    <td>
+                        <table class="details">
+                            <tr>
+                                <td><input type="submit" class="button , csk" value="Chennai Super Kings" name="team"></td>
+                                <td rowspan="5"><img src="/./static/asserts/{{player.id}}.png" alt="players-card" class="players-card" height="450PX" width="400PX"></td>
+                                <td><input type="submit" class="button , kkr" value="Kolkata Knight Riders" name="team"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="button , rcb" value="Royal Challengers Bangalore" name="team"></td>
+                                <td><input type="submit" class="button , lsg" value="Lucknow Super Giants" name="team"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="button , mi" value="Mumbai Indians" name="team"></td>
+                                <td><input type="submit" class="button , pk" value="Punjab Kings" name="team"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="button , dc" value="Delhi Capitals" name="team"></td>
+                                <td><input type="submit" class="button , rr" value="Rajasthan Royals" name="team"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="button , gt" value="Gujarat Titans" name="team"></td>
+                                <td><input type="submit" class="button , srh" value="Sunrisers Hyderabad" name="team"></td>
+                            </tr>
+                            <tr>
+                                <td> <a href="/./static/players_list.pdf" target="_blank"><button type="button" class="button , list">View Players</button></a> </td>
+                                <td><input type="submit" class="button , submit" value="FINAL BID" name="submit"></td>
+                                <td><input type="submit" class="button , unsold" value="UNSOLD" name="unsold"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                    <td>
+                            <h2>Team-Stats</h2>
+                            <table class="BID" style="border: 1px solid black;">
+                                    <tr>
+                                        <th>TEAM NAME</th>
+                                        <th>TEAM POINTS</th>
+                                        <th>REMAINING PURSE</th>
+                                    </tr>
+                                    {% for t in teams %}
+                                        <tr>
+                                        <th>
+                                            {% if t.name=='Chennai Super Kings' %}
+                                            CSK
+                                            {% elif t.name=='Kolkata Knight Riders' %}
+                                            KKR
+                                            {% elif t.name=='Royal Challengers Bangalore' %}
+                                            RCB
+                                            {% elif t.name=='Mumbai Indians' %}
+                                            MI
+                                            {% elif t.name=='Punjab Kings' %}
+                                            PK
+                                            {% elif t.name=='Delhi Capitals' %}
+                                            DC
+                                            {% elif t.name=='Rajasthan Royals' %}
+                                            RR
+                                            {% elif t.name=='Gujarat Titans' %}
+                                            GT
+                                            {% elif t.name=='Sunrisers Hyderabad' %}
+                                            SRH
+                                            {% elif t.name=='Lucknow Super Giants' %}
+                                            LSG
+                                            {% endif %}
+                                        </th>
+                                        <th style="text-align: center;">{% for tm,grp in teamlists| groupby('tid') %}
+                                            {% if tm==t.id %}
+                                                {{ grp | sum('points')}}
+                                            {% endif %}
+                                            {% endfor %}
+                                        </th>
+                                        <th style="text-align: center;">{{t.purse}}</th>
+                                        </tr>
+                                    {% endfor %}
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table class="current">
+                <tr>
+                    <td>    
+                        {% if entry %}                             
+                        <b>Current Bid:</b>
+                            {% if teamlist.amount %}
+                                {{teamlist.amount}} Crores
+                            {% else %}
+                                {{player.base_prize}}
+                            {% endif %}
+                            <br>
+                        <b>Placed-By:</b>{{curteam.name}}
+                        {% endif %}
+                    </td>
+                </tr>
+                </table>
+        </form>
+    </center>
+</body>
+</html>

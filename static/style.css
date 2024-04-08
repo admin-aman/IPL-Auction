@@ -1,0 +1,178 @@
+*{
+  padding: 2px;
+  margin: 2px;
+  /* font-size: 50px; */
+  /* width: 100vw; */
+
+}
+
+.ipl-logo{
+  width: 250px;
+  height: 125px;
+  border-radius: 20px;
+  padding-left: 5px;
+}
+
+.qubit-logo{
+  width: 250px;
+  height: 125px;
+  border-radius: 20px;
+  padding-right: 5px;
+}
+
+.event-logo{
+  width: 950px;
+  height: 125px;
+  border-radius: 20px;
+}
+
+.main{
+  /* margin: 10px 0px 20px 0px; */
+  border-collapse: 3px;
+  border-spacing: 3px;
+
+
+}
+
+.details{
+  padding: 2px 3px 2px 3px;
+border-collapse: separate;
+border-spacing: 3px;
+}
+
+.BID{
+  padding: 2px 3px 2px 3px;
+  border-collapse: separate;
+  border-spacing: 10px;
+  font-size: 24px;
+}
+
+.button {
+  background-color: #1a3989;
+  border: none;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 2px 2px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.csk:hover{
+  background-image: linear-gradient(90deg, #0081e9 0%, #ffff3c 70%);
+  color: #000000;
+}
+
+.kkr:hover{
+  background-image: linear-gradient(90deg, #b3a123 30%, #2e0854 70%);
+}
+
+.rcb:hover{
+  background-image: linear-gradient(90deg, #2b2a29 10%, #d1ab3e 45%, #ec1c24 90%);
+}
+
+.lsg:hover{
+  background-image: linear-gradient(90deg, #0057e2 0%, #f28b00 45%,#fecc00 70%);
+  color: #000000;
+}
+
+.mi:hover{
+  background-image: linear-gradient(90deg, #d1ab3e 0%, #004ba0 70%);
+  background-color: #004ba0;
+}
+
+.pk:hover{
+  background-image: linear-gradient(90deg, #ed1b24 0%, #dcdddf 70%);
+  color: #000000;
+}
+
+.dc:hover{
+  background-image: linear-gradient(90deg, #ef1b23 0%, #00008b 70%);
+}
+
+.rr:hover{
+  background-image: linear-gradient(90deg, #254aa5 40%, #cba92b 80%);
+}
+
+.gt:hover{
+  background-image: linear-gradient(90deg, #1b2133 0%, #dbbe6e 60%, #ffffff 90%);
+  color: #000000;
+}
+
+.srh:hover{
+  background-image: linear-gradient(90deg, #000000 0%, #ff822a 90%);
+}
+
+.submit:hover{
+  background: radial-gradient(circle, rgba(105,177,255,1) 0%, rgba(48,255,0,1) 100%);
+  color: #000000;
+}
+
+.list:hover{
+  background-color: rgb(229, 206, 31);
+  color: black;
+}
+
+.unsold:hover{
+  background-color: rgb(255, 0 , 0);
+}
+
+.bt{
+background-color: #1a3989;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+margin: 4px 2px;
+cursor: pointer;
+width: 100%;
+border-radius: 10px;
+}
+
+.bt:hover{
+background-color: #2acb30;
+}
+
+h3{
+font-size: 40px;
+padding-top: 8%;
+padding-bottom: 2%;
+}
+
+.auctioner{
+border: #1a3989 3px solid;
+text-align: center;
+font-size: 25px;
+padding: 20px 40px;
+margin: 8px 4px;
+}
+
+
+.team-details{
+font-size: 30px;
+padding: 40px 30px;
+}
+
+
+.players-details{
+font-size: 30px;
+padding: 10px 30px;
+border-collapse: separate;
+  border-spacing: 25px;
+}
+
+
+
+.current{
+font-size: 35px;
+padding-top: 15px;
+/* border: 2px solid black; */
+/* border-radius: 5px; */
+}
