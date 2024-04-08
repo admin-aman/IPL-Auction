@@ -1,4 +1,5 @@
-# IPL-Auction
+# IPL-Auction  (Download and have Fun)
+# Run CMD on the current folder and type { python main.py } to run the game on your localhost 
 
 # What is does ? 🤔
 ![TmntMichelangeloGIF](https://github.com/admin-aman/IPL-Auction/assets/105372574/a8dd20e1-c903-4736-9dce-785d242b7b11)
